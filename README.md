@@ -1,4 +1,10 @@
+# Features
 - [x] List all meals
 - [x] Add a meal
 - [x] List all customers
-- [ ] Add a customer
+- [x] Add a customer
+
+# To run
+```
+ruby app.rb
+```
