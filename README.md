@@ -1,0 +1,4 @@
+- [x] List all meals
+- [x] Add a meal
+- [ ] List all customers
+- [ ] Add a customer
