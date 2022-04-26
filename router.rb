@@ -1,6 +1,7 @@
 class Router
-  def initialize(meals_controller)
+  def initialize(meals_controller, customers_controller)
     @meals_controller = meals_controller
+    @customers_controller = customers_controller
     @running = true
   end
 
@@ -17,6 +18,7 @@ class Router
   def display_menu
     puts "1. List meals"
     puts "2. Add a Meal"
+    puts "3. List customers"
     puts "0. To quit"
   end
 
@@ -27,6 +29,7 @@ class Router
     case user_input
     when 1 then @meals_controller.list
     when 2 then @meals_controller.add
+    when 3 then @customers_controller.list
     when 0 then stop
     else
       puts "Wrong option (not a valid number)"
