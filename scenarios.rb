@@ -1,6 +1,6 @@
-require_relative "app/repositories/customer_repository"
+require_relative "app/repositories/employee_repository"
 
-CUSTOMER_CSV_PATH = "data/customers.csv"
-customer_repository = CustomerRepository.new(CUSTOMER_CSV_PATH)
+EMPLOYEE_CSV_PATH = "data/employees.csv"
+employee_repository = EmployeeRepository.new(EMPLOYEE_CSV_PATH)
 
-p customer_repository
+p employee_repository
