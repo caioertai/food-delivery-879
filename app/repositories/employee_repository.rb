@@ -13,6 +13,12 @@ class EmployeeRepository
     @employees
   end
 
+  def all_riders
+    # Check the ruby pretzel colon shortcut
+    # @employees.select(&:rider?)
+    @employees.select { |employee| employee.rider? }
+  end
+
   def find(id)
     @employees.find { |employee| employee.id == id }
   end

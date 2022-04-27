@@ -1,8 +1,9 @@
 class Router
-  def initialize(meals_controller, customers_controller, sessions_controller)
+  def initialize(meals_controller, customers_controller, sessions_controller, orders_controller)
     @meals_controller = meals_controller
     @customers_controller = customers_controller
     @sessions_controller = sessions_controller
+    @orders_controller = orders_controller
     @current_user = nil
     @running = true
   end
@@ -43,8 +44,8 @@ class Router
 
   def dispatch_rider(user_input)
     case user_input
-    when 1 then puts "TODO: list orders"
-    when 2 then puts "TODO: mark order"
+    when 1 then @orders_controller.list_my_orders(@current_user)
+    when 2 then @orders_controller.mark_as_delivered(@current_user)
     when 0 then stop
     end
   end
@@ -55,7 +56,7 @@ class Router
     when 2 then @meals_controller.add
     when 3 then @customers_controller.list
     when 4 then @customers_controller.add
-    when 5 then puts "TODO: order creation"
+    when 5 then @orders_controller.add
     when 0 then stop
     else
       puts "Wrong option (not a valid number)"

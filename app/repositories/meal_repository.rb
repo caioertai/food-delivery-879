@@ -19,6 +19,10 @@ class MealRepository
     update_csv
   end
 
+  def find(id)
+    @meals.find { |meal| meal.id == id }
+  end
+
   private
 
   def update_csv

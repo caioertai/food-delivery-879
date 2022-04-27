@@ -9,9 +9,11 @@ class SessionsController
   def login
     ##### CREATE / LOGIN
     # Ask VIEW to user for a username
-    username = @sessions_view.ask_for_string("What's your username?")
+    # username = @sessions_view.ask_for_string("What's your username?")
+    username = "rafael"
     # Ask VIEW to user for a password
-    password = @sessions_view.ask_for_string("What's your password?")
+    # password = @sessions_view.ask_for_string("What's your password?")
+    password = "another"
     # Ask REPO for the user of that username
     employee = @employee_repository.find_by_username(username)
 
