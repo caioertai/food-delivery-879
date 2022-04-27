@@ -13,6 +13,14 @@ class EmployeeRepository
     @employees
   end
 
+  def find(id)
+    @employees.find { |employee| employee.id == id }
+  end
+
+  def find_by_username(username)
+    @employees.find { |employee| employee.username == username }
+  end
+
   def create(new_employee)
     new_employee.id = next_id
     @employees << new_employee

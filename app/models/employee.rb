@@ -8,4 +8,12 @@ class Employee
     @password = attributes[:password]
     @role     = attributes[:role]
   end
+
+  def password_match?(password_check)
+    @password == password_check # true / false
+  end
+
+  def manager?
+    @role == "manager"
+  end
 end
